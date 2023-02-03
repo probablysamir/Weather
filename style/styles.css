@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: lightblue;
+}
+.wrapper{
+    background-color: rgb(217, 232, 237);
+    box-shadow: 0 0 5px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.wrapper .topic-head{
+    font-size: 1.3rem;
+    color: rgb(71, 184, 221);
+    border-bottom: 3px rgb(204, 215, 218) solid;
+    padding: 5%;
+}
+
+.topic-head i{
+    display: none;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+.topic-head i:hover{
+    color: lightblue;
+}
+
+.wrapper #input-container{
+    padding: 3%;    
+}
+
+.wrapper #search-text{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.search-btn{
+    height: 50px;
+    width: 100%;
+    color: rgb(71, 184, 221);
+    background-color: transparent;
+    border: 3px lightblue solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.search-btn:hover{
+    background-color: lightblue;
+    color: rgb(240, 240, 240);
+}
+
+#display-weather{
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display-weather img{
+    height: 200px;
+}
+
+.temperature{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3%;
+}
+
+.weather-condition{
+    margin-bottom: 3%;
+}
+
+.location i{
+    margin-right: 4px;
+}
+.location{
+    margin-bottom: 5%;
+}
+
+.down-container{
+    display: flex;
+    width: 100%;
+    border-top: 3px rgb(204, 215, 218) solid;
+}
+
+.down-container i{
+    color: rgb(71, 184, 221);
+    font-size: 2rem;
+    margin-right: 6px;
+    /* flex-grow: 1; */
+}
+
+.down-container div{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3%;
+}
+
+.feels-like{
+    border-right: 3px rgb(204, 215, 218) solid;
+}
+
+.down-container .inner-container-bot{
+    padding: 0;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#bot-font{
+    font-size: 0.8rem;
+}

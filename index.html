@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- linking css  -->
+    <link rel="stylesheet" href="./style/styles.css">
+
+    <!-- linking fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="topic-head"><i class="fa-solid fa-circle-left"></i>Weather App</div>
+        <section id="input-container">
+            <input type="text" placeholder="City Name" id="search-text">
+            <button class="search-btn">Search</button>
+        </section>
+        <section id="display-weather">
+            <img src="./icons/01d.svg" alt="weatherIcon" id="weatherIcon">
+            <div class="temperature">18.12°C</div>
+            <div class="weather-condition">Cloudy</div>
+            <div class="location"><i class="fa-solid fa-location-dot"></i><span class="location-text">Kathmandu, NP</span></div>
+            <div class="down-container">
+                <div class="feels-like"><i class="fa-solid fa-temperature-quarter"></i>
+                    <div class="inner-container-bot">
+                        <span id="feel-temp">69.69°C</span><span id="bot-font">Feels Like</span>
+                    </div>
+                </div>
+                <div class="humidity"><i class="fa-solid fa-droplet"></i>
+                    <div class="inner-container-bot">
+                        <span id="humidity-perc">69 %</span><span id="bot-font">Humidity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
