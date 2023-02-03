@@ -37,12 +37,12 @@ searchBtn.addEventListener('click',()=>{
 
 //Function to display the weather
 function showWeather(){
+    weatherIcon.src = `./icons/${weatherDetails[index].weather[0].icon}.svg`
     temperature.innerText = `${weatherDetails[index].main.temp}°C`;
     locationText.innerText = `${weatherDetails[index].name}, ${weatherDetails[index].sys.country}`;
     weatherCondition.innerText = weatherDetails[index].weather[0].description;
     feelTemp.innerText = `${weatherDetails[index].main.feels_like}°C`;
     humidityPerc.innerText = `${weatherDetails[index].main.humidity} %`;
-    weatherIcon.src = `./icons/${weatherDetails[index].weather[0].icon}.svg`
     inputContainer.style.display = 'none';
     displayWeather.style.display = 'flex';
     backBtn.style.display = 'inline-block';
