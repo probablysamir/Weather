@@ -39,6 +39,26 @@ body{
     padding: 3%;    
 }
 
+.alert{
+    height: 50px;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.warn{
+    background-color: #ffa79f;
+    color: #991717;
+}
+
+.process{
+    background-color: lightblue;
+    color: #01579b;
+    
+}
+
 .wrapper #search-text{
     height: 50px;
     width: 100%;
@@ -47,6 +67,7 @@ body{
     outline: none;
     border-radius: 10px;
     font-size: 1rem;
+    margin-top: 10px;
 }
 
 .search-btn{

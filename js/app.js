@@ -10,6 +10,7 @@ let locationText = document.querySelector('.location-text');
 let weatherCondition = document.querySelector('.weather-condition');
 let humidityPerc = document.querySelector('#humidity-perc');
 let feelTemp = document.querySelector('#feel-temp');
+let alertText = document.querySelector('.alert');
 const searchBtn = document.querySelector('.search-btn');
 const weatherDetails = [];
 
@@ -24,16 +25,31 @@ const getData = async (resource) => {
 }
 
 //Adding event listeners
-searchBtn.addEventListener('click',()=>{
+searchBtn.addEventListener('click',search);
+searchText.addEventListener('keydown', e => {
+    if (e.keyCode === 13) search();
+});
+
+// Function to call fetch fetch and manipulate DOM
+function search(){
     if(searchText.value!='') {
+        alertText.innerText = 'Fetching the city data';
+        alertText.classList.add('process');
+        alertText.style.display = 'flex';
         const resource = `https://api.openweathermap.org/data/2.5/weather?q=${searchText.value}&units=metric&appid=${apiKey}`;
         getData(resource).then(data => {
             weatherDetails.push(data);
             console.log(weatherDetails);
+            alertText.classList.remove('process');
+            alertText.style.display='none';
             showWeather();
+        }).catch(err=>{
+            alertText.classList.remove('process');
+            alertText.classList.add('warn');
+            alertText.innerText = 'Please enter a valid city name';
         })
     }
-})
+}
 
 //Function to display the weather
 function showWeather(){
